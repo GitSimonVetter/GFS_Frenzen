@@ -1,2 +1,4 @@
 # GFS_Frenzen
-Bro ich kann dass nicht hilfe
+Notizen
++  Nicht vergessen (-ExecutionPolicy ByPass)
++  Admin-Powershell
