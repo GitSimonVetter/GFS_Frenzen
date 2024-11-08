@@ -1,7 +1,7 @@
 #Setup Variablen
 $result = $null
 $message = $null
-# Client-Skript: Verbindet sich zum Server auf Port 8080
+# Client-Skript: Verbindet sich zum Server auf Port 4444
 $serverAddress = "127.0.0.1"  # localhost für Testzwecke
 $port = 4444                  # Der gleiche Port wie im Server-Skript
 
