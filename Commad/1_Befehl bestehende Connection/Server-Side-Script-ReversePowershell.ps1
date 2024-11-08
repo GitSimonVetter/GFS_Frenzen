@@ -19,13 +19,6 @@ try{
     $reader = New-Object System.IO.StreamReader($stream)
     $writer = New-Object System.IO.StreamWriter($stream)
     $writer.AutoFlush = $true
-
-    # Nachricht empfangen
-    $message = $reader.ReadLine()
-    Write-Output "Client: $message"
-
-
-
 while ($decision) 
     {
         try 
@@ -51,7 +44,7 @@ while ($decision)
             }
             
         } catch {
-            
+                    Write-Output "Fehler: $_"
                 }
     }
     # Schließe den Client nach der Kommunikation
