@@ -8,7 +8,7 @@ $listener = New-Object System.Net.Sockets.TcpListener([System.Net.IPAddress]::An
 try{
     # Starte den TCP-Listener
     $listener.Start()
-    Write-Output "Warte auf Verbindung..."
+    Write-Output "Warte auf Verbindung..." + $port
 
     # Akzeptiere einen eingehenden Client
     $client = $listener.AcceptTcpClient()
