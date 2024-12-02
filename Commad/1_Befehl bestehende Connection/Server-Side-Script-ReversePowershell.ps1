@@ -3,7 +3,7 @@ $decision = $true
 $message = $null
 
 # Server-Skript: Startet einen TCP-Listener auf Port 4444
-$listener = New-Object System.Net.Sockets.TcpListener([System.Net.IPAddress]::Any, 2222)
+$listener = New-Object System.Net.Sockets.TcpListener([System.Net.IPAddress]::Any, 4444)
 
 try{
     # Starte den TCP-Listener
